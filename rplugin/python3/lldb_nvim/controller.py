@@ -297,6 +297,7 @@ class Controller(Thread):  # pylint: disable=too-many-instance-attributes
                         return True
                     return False
 
+                # Call the functions requested
                 if event_matches(self._trx, skip=False):
                     try:
                         method, args, sync = self.in_queue.get(block=False)
